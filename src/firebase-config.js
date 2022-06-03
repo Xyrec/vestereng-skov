@@ -19,8 +19,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
 const db = getFirestore(app);
 
+// Export af normale firebase funktioner, så vi lettere kan tilgå dem i andre componenter
+export const auth = getAuth(app);
 export const bookingsRef = collection(db, "bookings");
 export const quotesRef = collection(db, "quotes");

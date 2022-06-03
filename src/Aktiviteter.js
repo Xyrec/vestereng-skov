@@ -1,5 +1,7 @@
+// Import af custom components
 import Quotes from "./Quotes";
-import ReadMore from "./ReadMore";
+import ReadMore from "./ReadMore"; 
+// Import af billeder der skal bruges på siden
 import background from "./img/vestereng_løber.png";
 import beachvolley from "./img/vestereng_beachvolley.png";
 import discgolf from "./img/vestereng_discgolf.png";
@@ -8,7 +10,7 @@ import bmxpark from "./img/vestereng_bmxpark.jpg";
 export default function Aktiviteter(props) {
     return (
         <>
-            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}>
+            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}> {/* React inline CSS med importeret billede */}
                 <div className="container px-3 py-5">
                     <div className="row align-items-center justify-content-center">
                         <div className="my-5 text-center text-shadow">
@@ -47,6 +49,7 @@ export default function Aktiviteter(props) {
                     </div>
                 </div>
             </div>
+            {/* Importerede components bruges her */}
             <Quotes />
             <ReadMore />
         </>

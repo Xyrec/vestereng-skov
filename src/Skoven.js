@@ -1,5 +1,7 @@
+// Import af custom components
 import Quotes from "./Quotes";
 import ReadMore from "./ReadMore";
+// Import af billeder der skal bruges på siden
 import background from "./img/vestereng_skov.JPG"
 import bunker from "./img/vestereng_bunker.png"
 import skydebane from "./img/vestereng_skydebane.png"
@@ -7,7 +9,7 @@ import skydebane from "./img/vestereng_skydebane.png"
 export default function Skoven(props) {
     return (
         <>
-            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}>
+            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}> {/* React inline CSS med importeret billede */}
                 <div className="px-3 py-5">
                     <div className="row align-items-center justify-content-center">
                         <div className="my-5 text-center text-shadow">
@@ -37,6 +39,7 @@ export default function Skoven(props) {
                     </div>
                 </div>
             </div>
+            {/* Importerede components bruges her */}
             <Quotes />
             <ReadMore />
         </>

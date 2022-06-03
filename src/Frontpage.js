@@ -1,13 +1,16 @@
+// Import af Link fra react-router, så vi kan linke til absolute stier på en lettere måde
 import { Link } from "react-router-dom";
+// Import af custom components
 import Quotes from './Quotes';
 import ReadMore from './ReadMore';
+// Import af billeder der skal bruges på siden
 import background from "./img/vestereng_bænk.JPG"
 import græsmark from "./img/vestereng_græsmark.jpg"
 
 export default function Frontpage(props) {
     return (
         <>
-            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}>
+            <header className="bg-dark py-5 bg-img" style={{ backgroundImage: `url(${background})` }}> {/* React inline CSS med importeret billede */}
                 <div className="px-3 py-5">
                     <div className="row align-items-center justify-content-center">
                         <div className="my-5 text-center">
@@ -15,7 +18,7 @@ export default function Frontpage(props) {
                             <p className="lead fw-normal text-white text-shadow">Den lille grønne lunge i Aarhus N</p>
                             <div className="mb-4 pb-5">
                                 <a className="btn btn-success btn-lg px-4 mx-2" href="#mere">Læs mere</a>
-                                <Link className="btn btn-outline-light btn-lg px-4 mx-2" to="/udlejning">Udlejning</Link>
+                                <Link className="btn btn-outline-light btn-lg px-4 mx-2" to="/udlejning">Udlejning</Link> {/* Brug af Link, læg mærke til man bruger "to" istedet for "href" */}
                             </div>
                         </div>
                     </div>
@@ -30,6 +33,7 @@ export default function Frontpage(props) {
                     </div>
                 </div>
             </div>
+            {/* Importerede components bruges her */}
             <Quotes />
             <ReadMore />
         </>

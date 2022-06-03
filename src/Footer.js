@@ -1,3 +1,4 @@
+// Import af billede der skal bruges i componentet
 import aaklogo from "./img/Aarhus_logo.png"
 
 export default function Footer(props) {

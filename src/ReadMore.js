@@ -1,4 +1,6 @@
+// Import af Link fra react-router, så vi kan linke til absolute stier på en lettere måde
 import { Link } from "react-router-dom";
+// Import af billeder der skal bruges på siden
 import skoven from "./img/udforsk_skoven.webp";
 import sport from "./img/sportsgrene.webp";
 import udlej from "./img/udlejning.webp";
@@ -18,9 +20,9 @@ export default function ReadMore(props) {
                 <div className="row">
                     <div className="col-lg-4 mb-5">
                         <div className="card h-100 shadow">
-                            <img className="card-img-top" src={skoven} alt="Bunker i Vestereng Skov" />
+                            <img className="card-img-top" src={skoven} alt="Bunker i Vestereng Skov" /> {/* Brug af importeret billede i React */}
                             <div className="card-body p-4">
-                                <Link className="text-decoration-none link-dark stretched-link" to="/om-skoven">
+                                <Link className="text-decoration-none link-dark stretched-link" to="/om-skoven"> {/* Brug af Link, læg mærke til man bruger "to" istedet for "href" */}
                                     <h5 className="card-title mb-3">Udforsk skoven</h5>
                                 </Link>
                                 <p className="card-text mb-0">Kom ud i skoven og få et interessant indblik i Aarhus' historie.</p>
